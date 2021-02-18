@@ -173,8 +173,7 @@ template<class T, class U> void vti(vt<T> &v, U x, size_t n, size_t m...) {
 }
 
 void solve() {
-    vt<vt<int>> a(5, vt<int>(2, 0));
-    debug(a);
+    ;
 }
 
 int main() {

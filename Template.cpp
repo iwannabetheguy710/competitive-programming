@@ -107,11 +107,11 @@ template<class T> string to_string(T v) {
     string res;
     EACH(x, v) {
 		if(!f)
-			res+=' ';
+			res+=", ";
 		f=0;
 		res+=to_string(x);
 	}
-    return res;
+    return "{" + to_string(res) + "}";
 }
 
 template<class A> void write(A x) {
@@ -141,9 +141,9 @@ template<class H, class... T> void DBG(H h, T... t) {
 	DBG(t...);
 }
 #ifdef _DEBUG
-#define dbg(...) cerr << "LINE(" << __LINE__ << ") -> [" << #__VA_ARGS__ << "]: [", DBG(__VA_ARGS__)
+#define debug(...) cerr << "LINE(" << __LINE__ << ") -> [" << #__VA_ARGS__ << "]: [", DBG(__VA_ARGS__)
 #else
-#define dbg(...) 0
+#define debug(...) 0
 #endif
 
 template<class T> void offset(ll o, T& x) {
@@ -173,12 +173,13 @@ template<class T, class U> void vti(vt<T> &v, U x, size_t n, size_t m...) {
 }
 
 void solve() {
-    ;
+    vt<vt<int>> a(5, vt<int>(2, 0));
+    debug(a);
 }
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
 
     solve();
 }
